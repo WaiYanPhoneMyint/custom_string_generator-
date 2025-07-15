@@ -10,20 +10,21 @@
 
 <div class="container">
   <div class="left">
-    <h2>Custom Strings</h2>
-    <textarea id="inputStrings" rows="15" placeholder="Enter strings here, each line is one option..."></textarea>
+    <h2>📝 Input Strings</h2>
+    <textarea id="inputStrings" rows="15" placeholder="Enter one string per line..."></textarea>
   </div>
+
   <div class="right">
-    <h2>Generate</h2>
-    <input type="number" id="amount" placeholder="Enter amount to generate" min="1">
-    <button onclick="generateStrings()">Get Strings</button>
+    <h2>🎯 Generator</h2>
+    <input type="number" id="amount" placeholder="How many to generate?" min="1">
+    <button onclick="generateStrings()">Generate</button>
   </div>
 </div>
 
 <!-- Modal -->
 <div class="modal" id="resultModal">
   <div class="modal-content">
-    <h3>Generated Strings</h3>
+    <h3>✅ Generated Strings</h3>
     <pre id="outputText"></pre>
     <div class="modal-buttons">
       <button onclick="copyText()">Copy</button>
