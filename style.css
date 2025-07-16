@@ -15,10 +15,8 @@ body {
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
-    height: 100vh;
   }
 }
-
 
 .left, .right {
   flex: 1;
@@ -26,7 +24,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-sizing: border-box;
-
+  height: auto;
 }
 
 textarea, input {
@@ -47,8 +45,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   display: block;
-  margin: 5% auto 0 auto; /* top, auto left/right */
-
+  margin: 5% auto 0 auto;
 }
 
 button:hover {
@@ -88,3 +85,48 @@ button:hover {
   gap: 10px;
   justify-content: flex-end;
 }
+
+.history {
+  padding: 20px;
+  background: #0A1121;
+  margin: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  min-height: 150px;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* ✅ Prevents overflow */
+  color: white;
+}
+
+
+.history th, .history td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  word-break: break-word;     /* ✅ Break long strings */
+  white-space: pre-wrap;      /* ✅ Wrap long lines */
+}
+
+
+.history th {
+  background: #1D2538;
+}
+
+.history tbody {
+  min-height: 100px;
+}
+
+#errorMsg {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 5px;
+  display: none;
+}
+
