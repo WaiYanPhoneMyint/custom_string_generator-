@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="right" style="width: 100%;">
+    <h2>🎯 Auto String Generator</h2>
+    <input type="number" id="amount" placeholder="How many to generate?" min="1">
+    <button onclick="generateStrings()">Generate</button>
+  </div>
+</div>
+
+<!-- Message alerts -->
+<div class="message success" id="msgSuccess"></div>
+<div class="message error" id="msgError"></div>
+
+<!-- Modal -->
+<div class="modal" id="resultModal">
+  <div class="modal-content">
+    <h3>✅ Generated Strings</h3>
+    <pre id="outputText"></pre>
+    <div class="modal-buttons">
+      <button onclick="copyText()">Copy</button>
+      <button onclick="downloadText()">Download .txt</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- History Table -->
+<div id="historySection" class="history">
+  <h2>🧾 Generation History</h2>
+  <div style="text-align: right; margin-bottom: 10px;">
+    <button onclick="downloadHTML()">📥 Export Data</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>String(s)</th>
+        <th>Amount</th>
+        <th>Date & Time</th>
+      </tr>
+    </thead>
+    <tbody id="historyTable">
+      <tr id="emptyRow"><td colspan="4" style="text-align:center;">No history yet</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="text-align: center; margin-top: 40px;">
+  <a href="https://github.com/WaiYanPhoneMyint" target="_blank" style="color: white; text-decoration: none;">
+    Bunny
+  </a> © 2025 All right reserved
+</p>
+
+<script src="script.js"></script>
+</body>
+</html>

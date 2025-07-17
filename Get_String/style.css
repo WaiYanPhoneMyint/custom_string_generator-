@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #1D2538;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.right {
+  flex: 1;
+  background: #0A1121;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+input {
+  width: 95%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #1D2538;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 5% auto 0 auto;
+}
+
+button:hover {
+  background: #0088cc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-content pre {
+  background: #111;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.history {
+  padding: 20px;
+  background: #0A1121;
+  margin: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: white;
+}
+
+.history th, .history td {
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 14px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.history th {
+  background: #1D2538;
+}
+
+/* ✅ Message styles */
+.message {
+  padding: 12px 16px;
+  margin: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.message.error {
+  background-color: #dc3545;
+  color: white;
+}
